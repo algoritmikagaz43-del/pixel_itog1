@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang='ru'>
+<head>
+    <meta charset='UTF-8'>
+    <title>PixelForge Editor</title>
+      <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class='nav-item' onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'});">Проект</div>
+        <div class='nav-item' onclick="document.getElementById('team').scrollIntoView({behavior: 'smooth'});">Команда</div>
+        <div class='nav-item' onclick="document.getElementById('features').scrollIntoView({behavior: 'smooth'});">Инструменты</div>
+        <div class='nav-item' onclick="document.getElementById('pricing').scrollIntoView({behavior: 'smooth'});">Лицензия</div>
+        
+   <a href="https://algoritmikagaz43-del.github.io/pixel1/" target="_blank" rel="noopener noreferrer"> <div class='nav-item switch-theme-button'>Переход в редактор</div> </a>
+   <!-- Обубликовать на гит хаб свой редактор и вставить ссылку сюда -->
+    </nav>
+    
+    <header>
+        <h1><span class='mars mars1'>PIXELFORGE</span></h1>
+      
+    
+    </header>
+    
+    <main>
+        <section class='section1' id='about'>
+            <h1> <img src="https://i.ibb.co/Sj642GT/6d7a21d4-f4ee-4fa0-8644-12cbde901211.jpg" ></h1>
+            <h1>О редакторе</h1>
+            <div class='about-wrapper'>
+                <p>Хватит генерировать нейросетями. Возьми контроль над каждым пикселем.</p>
+                <p>PixelForge — это возвращение к истокам цифрового искусства с мощностью современного ПО.</p>
+            </div>
+        </section>
+
+        <section class='section2' id='team'>
+            <h1>Команда</h1>
+            <div class='team-wrapper'>
+                <div class='team-item team1 pixel-style'>
+                    <div class='team-item-top'></div>
+                    <div class='team-item-bottom'><h2>Джамал</h2><p>Ядро & Оптимизация</p></div>
+                </div>
+                <div class='team-item team2 pixel-style'>
+                    <div class='team-item-top'></div>
+                    <div class='team-item-bottom'><h2>Артем</h2><p>UI/UX Магия</p></div>
+                </div>
+                <div class='team-item team3 pixel-style'>
+                    <div class='team-item-top'></div>
+                    <div class='team-item-bottom'><h2>Данил</h2><p>Рендеринг</p></div>
+                </div>
+            </div>
+        </section>
+
+     <section class='section4' id='features'>
+    <h1>Наборы кистей</h1>
+    <div class='merch-wrapper'>
+        <!-- Кисть -->
+        <div class='merch-item merch1 pixel-style'>
+            <div class='merch-item-top brush-svg'></div>
+            <div class='merch-item-bottom'>
+                <h2 class='merch-item-name'>Пиксельная кисть</h2>
+                <p class='merch-item-descr'>Для рисования идеальных квадратов.</p>
+            
+            </div>
+        </div>
+        <!-- Ластик -->
+        <div class='merch-item merch2 pixel-style'>
+            <div class='merch-item-top eraser-svg'></div>
+            <div class='merch-item-bottom'>
+                <h2 class='merch-item-name'>Массивный ластик</h2>
+                <p class='merch-item-descr'>Стирает сразу блок.</p>
+             
+            </div>
+        </div>
+        <!-- Палитра -->
+        <div class='merch-item merch3 pixel-style'>
+            <div class='merch-item-top palette-svg'></div>
+            <div class='merch-item-bottom'>
+                <h2 class='merch-item-name'>VGA Палитра</h2>
+                <p class='merch-item-descr'>Классические 16 цветов эпохи DOS.</p>
+                
+            </div>
+        </div>
+        <!-- Шейдеры -->
+        <div class='merch-item merch4 pixel-style'>
+            <div class='merch-item-top shader-svg'></div>
+            <div class='merch-item-bottom'>
+                <h2 class='merch-item-name'>Сохранение</h2>
+                <p class='merch-item-descr'>В формате png.</p>
+              
+            </div>
+        </div>
+    </div>
+</section>
+        <section class='section3' id='pricing'>
+            <div class='submit-wrapper'>
+                <h1>Получить лицензию</h1>
+                <form class='submit-form'>
+                    <input class='submit-input' type='text' placeholder='Имя разработчика'>
+                    <input class='submit-input' type='email' placeholder='E-mail'>
+                    <div class='submit-input-row'>
+                        <input class='submit-input days-input' type='number' placeholder='Кол-во ПК'>
+                        <select class='submit-select'>
+                            <option value='0'>Free</option>
+                            <option value='2990'>Pro</option>
+                            <option value='5990'>Studio</option>
+                        </select>
+                    </div>
+                </form>
+                <div class='submit-btn-row'>
+                    
+                    <div class='submit-btn submit-btn-send'>Купить</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+// JS будет вставлен сюда отдельным блоком ниже
+ <script src='https://kit.fontawesome.com/f77600b8df.js' crossorigin='anonymous'></script>
+
+</body>
+</html>

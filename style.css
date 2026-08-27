@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+    --bg-dark: #1a0d2e;
+    --bg-medium: #2c1a4f;
+    --bg-light: #4a326e;
+    --accent-pink: #ff66cc;
+    --text-white: #f0f0f0;
+}
+
+body {
+    width: 100vw; height: 100vh; margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+}
+
+/* Эффект пиксельной сетки */
+.pixel-style {
+    position: relative;
+    background: var(--bg-medium);
+    border: 2px solid var(--accent-pink) !important;
+    /* Имитация пикселей через тень */
+    box-shadow: 
+      4px 0 0 var(--accent-pink),
+      8px 0 0 var(--accent-pink),
+      0 4px 0 var(--accent-pink),
+      4px 4px 0 var(--accent-pink),
+      8px 4px 0 var(--accent-pink);
+}
+
+header {
+    width: 100%; height: 100vh;
+    background: linear-gradient(135deg, var(--bg-dark), #3a1b5b);
+    display: flex; align-items: center; justify-content: center; flex-direction: column;
+    text-align: center;
+}
+header h1 { font-size: 5em; text-transform: uppercase; line-height: 1.2; }
+.mars1 { color: var(--accent-pink); font-weight: bold; }
+
+
+.arrow-next {
+    font-size: 3em; margin-top: 2em; cursor: pointer; color: var(--accent-pink);
+    transition: transform 0.3s ease;
+}
+.arrow-next:hover { transform: translateY(5px); }
+
+main { min-height: 100vh; background: var(--bg-dark); }
+
+section {
+    width: 100%; min-height: 100vh; 
+    background: var(--bg-dark);
+    display: flex; align-items: center; justify-content: center; flex-direction: column;
+    padding: 4em 1em; box-sizing: border-box; color: var(--text-white);
+}
+section h1 { text-transform: uppercase; font-size: 2em; margin-bottom: 1em; letter-spacing: 3px; }
+
+/* --- СТИЛИ ДЛЯ ШАПКИ (NAVIGATION) --- */ nav { width: 100vw; padding: 1em 0 1em; position: fixed; top: 0; display: flex; justify-content: flex-end; /* Кнопки справа */ box-sizing: border-box; z-index: 100; /* Важно: чтобы меню было поверх контента при скролле */ } .nav-item { /* Ключевое изменение: задаем жесткую минимальную ширину */ min-width: 120px; width: auto; /* Позволяет кнопке расширяться, если текста станет больше */ padding: 0.5em 0.8em; /* Вертикальный паддинг оставляем, горизонтальный чуть увеличим для баланса */ text-align: center; /* Центрируем текст внутри кнопки */ border: 2px solid var(--accent-pink); border-radius: 5px; color: var(--text-white); margin-right: 1em; user-select: none; cursor: pointer; font-family: 'Press Start 2P', cursive; font-size: 0.65em; /* Размер шрифта можно немного уменьшить под новую ширину */ transition: all 0.2s ease; background-color: transparent; } /* Эффект нажатия остается прежним */ .nav-item:hover { background: var(--accent-pink); color: var(--bg-dark); transform: scale(1.05); } /* Стиль для индикатора корзины — он должен остаться компактным */ .cart-amount { position: absolute; top: -5px; right: -5px; background: var(--accent-pink); color: var(--bg-dark); padding: 0 0.3em; border-radius: 50%; font-size: 0.7em; font-family: sans-serif; /* Для цифр лучше оставить обычный шрифт */ }
+.nav-item:hover, .submit-btn:hover, .add-to-cart-btn:hover {
+    background: var(--accent-pink);
+    color: var(--bg-dark);
+    transform: scale(1.05);
+}
+
+.team-wrapper, .merch-wrapper, .about-wrapper {
+    width: 90%; max-width: 1200px; display: flex; gap: 1em; flex-wrap: wrap;
+}
+.team-item, .merch-item {
+    flex: 1 1 200px; min-width: 200px; text-align: center;
+}
+.team-item-top {
+    width: 120px; height: 120px; margin: 0 auto 1em;
+    border-radius: 50%; border: 3px solid var(--accent-pink);
+    background-size: cover;
+}
+.submit-form {
+    width: 100%; display: flex; flex-direction: column; gap: 1em;
+    background: var(--bg-medium); padding: 2em; border: 2px solid var(--accent-pink);
+}
+.submit-input, .submit-select {
+    background: transparent; border: none; border-bottom: 2px solid var(--accent-pink);
+    color: var(--text-white); padding: 0.5em; font-size: 1em;
+}
+.cart-amount { background: var(--accent-pink); color: var(--bg-dark); padding: 0 0.4em; border-radius: 50%; }
+
+
+
+/* --- СТИЛИ ДЛЯ БЛОКОВ С ИНСТРУМЕНТАМИ --- */
+
+.merch-wrapper {
+    width: 90%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    gap: 2em; /* Увеличенный отступ между карточками */
+    margin-top: 2em;
+    flex-wrap: wrap;
+}
+
+.merch-item {
+    width: 220px; /* Фиксированная ширина вместо % делает дизайн стабильным */
+    text-align: center;
+    background: var(--bg-medium);
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* Эффект выделения при наведении */
+.merch-item:hover {
+    border-color: var(--accent-pink);
+    transform: translateY(-5px) scale(1.02);
+}
+
+.merch-item-top {
+    width: 100%; 
+    height: 150px; /* Увеличиваем высоту под картинку */
+    margin: 0 auto 1em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #000; /* Фон самого изображения делаем черным */
+}
+
+/* Вставка ПИКСЕЛЬНЫХ картинок напрямую в CSS (SVG Data URI) */
+.brush-svg {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff66cc'%3E%3Cpath d='M2 2v20h20V2H2zm18 18H4V4h16v16z'/%3E%3Cpath d='M12 17l-1.5-2L9 17h6z'/%3E%3C/svg%3E");
+}
+
+.eraser-svg {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff66cc'%3E%3Crect x='3' y='3' width='18' height='18' rx='2'/%3E%3Cpath d='M16 7l-1.5-1.5L13 7h4v4l-3.5 3.5L9 11 16 7z'/%3E%3C/svg%3E");
+}
+
+.palette-svg {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff66cc'%3E%3Ccircle cx='12' cy='12' r='10' stroke='%23ff66cc' stroke-width='2' fill='none'/%3E%3Ccircle cx='12' cy='7' r='2' fill='%23ff66cc'/%3E%3Cellipse cx='9' cy='14' rx='2' ry='4' fill='%2366ccff'/%3E%3Cellipse cx='15' cy='14' rx='2' ry='4' fill='%23ffff66'/%3E%3C/svg%3E");
+}
+
+.shader-svg {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ff66cc'%3E%3Crect x='4' y='4' width='16' height='16' rx='2'/%3E%3Cpath d='M8 8h8v8H8z' opacity='0.5'/%3E%3Cline x1='12' y1='4' x2='12' y2='20' stroke='%23fff' stroke-width='1'/%3E%3C/svg%3E");
+}
+
+.merch-item-bottom h2 {
+    font-size: 1em;
+    color: var(--text-white);
+}
+
+.merch-item-bottom p {
+    font-size: 0.8em;
+    color: #b3a190;
+    margin-bottom: 1em;
+    min-height: 40px; /* Чтобы кнопки "Корзина" стояли ровно по одной линии */
+}
+
+.add-to-cart-btn {
+    cursor: pointer;
+    background: var(--accent-pink);
+    color: var(--bg-dark);
+}
+.nav-item.switch-theme-button:hover { background-color: yellow; }
